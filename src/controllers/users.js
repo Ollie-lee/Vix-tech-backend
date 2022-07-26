@@ -33,10 +33,12 @@ async function updateUser(req, res) {
   if (userIndex === -1) return res.status(404).json({ msg: "user not found" });
 
   const { name, gender, age } = req.body;
-  const user = new User(name, gender, age);
-  user_database.splice(userIndex, 1, user);
+  
+  user_database[userIndex].name = name;
+  user_database[userIndex].gender = gender;
+  user_database[userIndex].age = age;
 
-  return res.status(200).json(user);
+  return res.status(200).json(user_database[userIndex]);
 }
 
 async function getUser(req, res) {
