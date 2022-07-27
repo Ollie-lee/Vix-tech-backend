@@ -44,7 +44,7 @@ git clone https://github.com/Ollie-lee/Vix-tech-backend.git
 Install the dependency
 
 ```
-npm i
+cd Vix-tech-backend/ && npm i
 ```
 
 Running in local env
